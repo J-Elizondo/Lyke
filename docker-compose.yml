@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile
     container_name: lyke_api
     ports:
-      - "8500:80"
+      - "8500:8000"
     volumes:
       - ./api:/var/www/html
     depends_on:
@@ -27,6 +27,7 @@ services:
       DB_HOST: db
       DB_DATABASE: lyke_db
       DB_PASSWORD: password
+    command: php artisan serve --host=0.0.0.0 --port=8000
 
   # 3. The Python AI Service
   ai:
