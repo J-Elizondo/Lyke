@@ -1,0 +1,44 @@
+services:
+  # 1. The Database (Neon-compatible local setup)
+  db:
+    image: ankane/pgvector:latest
+    container_name: lyke_db
+    ports:
+      - "13500:5432"
+    environment:
+      POSTGRES_DB: lyke_db
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # 2. The Laravel API
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: lyke_api
+    ports:
+      - "8500:80"
+    volumes:
+      - ./api:/var/www/html
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_DATABASE: lyke_db
+      DB_PASSWORD: password
+
+  # 3. The Python AI Service
+  ai:
+    build:
+      context: ./ai-service
+    container_name: lyke_ai
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./ai-service:/app
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
