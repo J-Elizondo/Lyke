@@ -1,0 +1,19 @@
+{
+  "auth": {
+    "welcome": "Lyke",
+    "subtitle": "Find your visual match.",
+    "email": "Email",
+    "password": "Password",
+    "sign_in": "Sign In",
+    "sign_up": "Sign Up",
+    "login_failed": "Login Failed",
+    "full_name": "Full Name",
+    "confirm_password": "Confirm Password",
+    "back": "Back",
+    "sign_in_with_apple": "Sign in with Apple",
+    "sign_in_with_google": "Sign in with Google",
+    "sign_in_with_phone": "Sign in with Phone Number",
+    "select_country": "Select Country",
+    "what_is_your_phone_number": "What's your phone number?"
+  }
+}

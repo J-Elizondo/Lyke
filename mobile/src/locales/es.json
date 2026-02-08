@@ -1,0 +1,12 @@
+{
+  "auth": {
+    "welcome": "Lyke",
+    "subtitle": "Encuentra tu pareja visual.",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Regístrate",
+    "loginFailed": "Error al iniciar sesión"
+  }
+}
