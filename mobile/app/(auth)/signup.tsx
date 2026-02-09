@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, ScrollView, Alert, TouchableOpacity } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { router } from 'expo-router';
-import { api } from '../../src/services/api';
-import { useAuth } from '../../src/hooks/useAuth';
-import { Input } from '../../src/components/ui/Input';
-import { Button } from '../../src/components/ui/Button';
+import { api } from '@/src/services/api';
+import { useAuth } from '@/src/hooks/useAuth';
+import { Input } from '@/components/ui/Input';
+import { Button } from '@/components/ui/Button';
 
 export default function SignupScreen() {
   const { t } = useTranslation();

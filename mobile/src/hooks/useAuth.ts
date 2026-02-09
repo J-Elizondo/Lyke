@@ -41,7 +41,7 @@ export function useAuth() {
     } finally {
         await SecureStore.deleteItemAsync('auth_token');
         setUser(null);
-        router.replace('/login'); // Redirect to login screen
+        router.replace('/(auth)'); // Redirect to landing
     }
   }
 

@@ -6,7 +6,7 @@ import { useVideoPlayer, VideoView } from 'expo-video';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../../src/components/ui/Button';
+import { Button } from '../../components/ui/Button';
 
 const videoSource = 'https://lorem.video/1280x720_h264_20s_30fps';
 
@@ -69,7 +69,14 @@ export default function LandingScreen() {
             >
               <Button 
                 title={t('auth.sign_up')} 
-                onPress={() => router.push('/signup')} 
+                onPress={() =>
+                  router.push({
+                    pathname: '/(auth)/phoneEntry',
+                    params: {
+                      method: 'signup'
+                    }
+                  })
+                }
               />
               
               <TouchableOpacity 
@@ -98,7 +105,12 @@ export default function LandingScreen() {
               </TouchableOpacity>
 
               <Button title={t("auth.sign_in_with_phone")} onPress={() => {
-                router.push('/login')
+                router.push({
+                  pathname: '/(auth)/phoneEntry',
+                  params: {
+                    method: 'login'
+                  }
+                })
               }} />
 
               <TouchableOpacity 

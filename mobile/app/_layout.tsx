@@ -1,11 +1,11 @@
 import "../global.css";
-import '../src/locales/i18n';
+import '@/src/locales/i18n';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useFonts } from 'expo-font';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { useAuth } from "../src/hooks/useAuth";
+import { useAuth } from "@/src/hooks/useAuth";
 
 // Prevent the splash screen from auto-hiding
 SplashScreen.preventAutoHideAsync();
