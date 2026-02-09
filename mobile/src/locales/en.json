@@ -19,7 +19,8 @@
     "enter_your_code": "Enter your code",
     "sent_to": "Sent to {{phone}}",
     "resend_code": "Resend code",
-    "invalid_otp": "Please check the code and try again."
+    "invalid_otp": "Please check the code and try again.",
+    "enter_valid_phone_number_format": "Please enter a valid phone number format."
   },
   "country": {
     "united_states": "United States",
